@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/screens/Home_screen.dart';
+import 'package:flutter_application_1/screens/Register_screen.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 class SplachScreen extends StatefulWidget {
@@ -14,10 +15,10 @@ class _SplachScreenState extends State<SplachScreen> {
   @override
 void initState() {
   super.initState();
-  Future.delayed(Duration(seconds: 4), () {
+  Future.delayed(Duration(seconds: 8), () {
     Navigator.pushReplacement(
       context, 
-      MaterialPageRoute(builder: (context) => HomeScreen()),
+      MaterialPageRoute(builder: (context) => RegisterScreen()),
     );
   }
   );

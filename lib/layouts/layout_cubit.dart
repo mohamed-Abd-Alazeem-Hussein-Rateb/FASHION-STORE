@@ -20,7 +20,7 @@ class LayoutCubit extends Cubit<LayoutStates> {
 
   int bottomcurrentindex = 0;
 
-  List<Widget> layoutscreen = [
+  List<Widget> layoutscreen =const [
     HomeScreen(),
     FavouriteScreen(),
     CartScreen(),

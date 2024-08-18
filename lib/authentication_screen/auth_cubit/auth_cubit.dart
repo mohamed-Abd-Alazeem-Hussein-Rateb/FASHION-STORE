@@ -30,10 +30,7 @@ class AuthCubit extends Cubit<AuthStates> {
       var responsebody = jsonDecode(response.body);
       if (response.statusCode == 200 || response.statusCode == 201) {
         if (responsebody['status'] == true) {
-          await CacheNetwork.insertToCache(
-              key: 'token',
-              value: responsebody['data'][
-                  'token']); // هنا بحفظ الـ token في الـ cache تبع ال sharedpreference
+          await CacheNetwork.insertToCache(key: 'token', value: responsebody['data']['token']); // هنا بحفظ الـ token في الـ cache تبع ال sharedpreference
 
           await CacheNetwork.insertToCache(key: 'password', value: password);
           token = CacheNetwork.getCache(key: 'password');
@@ -57,7 +54,7 @@ class AuthCubit extends Cubit<AuthStates> {
       emit(logloadingState());
       http.Response response = await http
           .post(Uri.parse('https://student.valuxapps.com/api/login'), headers: {
-        'lang': 'ar',
+        'lang': 'en',
       }, body: {
         'email': email,
         'password': password,

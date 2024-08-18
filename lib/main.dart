@@ -7,6 +7,7 @@ import 'package:flutter_application_1/cubit_home/homedata_cubit.dart';
 import 'package:flutter_application_1/layouts/layout_cubit.dart';
 import 'package:flutter_application_1/screens/register_screen.dart';
 import 'package:flutter_application_1/screens/layout_screen.dart';
+import 'package:flutter_application_1/screens/splash_screen.dart';
 import 'package:flutter_application_1/shared/network/local_network.dart';
 import 'package:flutter_application_1/widget/costant_color.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -41,7 +42,7 @@ class EcomerceApp extends StatelessWidget {
         debugShowCheckedModeBanner: false,
         builder: DevicePreview.appBuilder,
         locale: DevicePreview.locale(context),
-        home: token != null && token != '' ? LayoutScreen() : RegisterScreen(),
+        home: token != null && token != '' ? LayoutScreen() : SplachScreen(),
       ),
     );
   }

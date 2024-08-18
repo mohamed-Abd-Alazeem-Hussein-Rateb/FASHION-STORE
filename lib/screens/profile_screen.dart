@@ -75,7 +75,7 @@ class ProfileScreen extends StatelessWidget {
                               elevation: 4,
                               margin: const EdgeInsets.symmetric(vertical: 10),
                               child: ListTile(
-                                leading: Icon(Icons.person, color: Colors.blue),
+                                leading:const Icon(Icons.person, color: Colors.blue),
                                 title: Text(layoutCubit.userModel!.name!),
                               ),
                             ),
@@ -84,7 +84,7 @@ class ProfileScreen extends StatelessWidget {
                               elevation: 4,
                               margin: const EdgeInsets.symmetric(vertical: 10),
                               child: ListTile(
-                                leading: Icon(Icons.email, color: Colors.blue),
+                                leading:const Icon(Icons.email, color: Colors.blue),
                                 title: Text(layoutCubit.userModel!.email!),
                               ),
                             ),
@@ -93,7 +93,7 @@ class ProfileScreen extends StatelessWidget {
                               elevation: 4,
                               margin: const EdgeInsets.symmetric(vertical: 10),
                               child: ListTile(
-                                leading: Icon(Icons.phone, color: Colors.blue),
+                                leading:const Icon(Icons.phone, color: Colors.blue),
                                 title: Text(layoutCubit.userModel!.phone!),
                               ),
                             ),
@@ -128,7 +128,7 @@ class ProfileScreen extends StatelessWidget {
                                 leading:const Icon(Icons.security_update_sharp, color: Colors.blue),
                                 title: TextButton(
                                   onPressed: () {
-                                   Navigator.push(context, MaterialPageRoute(builder: (context) =>  UpdateProfileScreen()));
+                                   Navigator.push(context, MaterialPageRoute(builder: (context) => const UpdateProfileScreen()));
                                     
                                   },
                                   child: const Text(
@@ -147,7 +147,7 @@ class ProfileScreen extends StatelessWidget {
                               elevation: 4,
                               margin: const EdgeInsets.symmetric(vertical: 10),
                               child: ListTile(
-                                leading: Icon(Icons.logout, color: Colors.blue),
+                                leading:const Icon(Icons.logout, color: Colors.blue),
                                 title: TextButton(
                                   onPressed: () {
                                     authCubit.logout();

@@ -2,7 +2,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/authentication_screen/auth_cubit/auth_cubit.dart';
 import 'package:flutter_application_1/authentication_screen/auth_cubit/auth_states.dart';
-import 'package:flutter_application_1/screens/Home_screen.dart';
 import 'package:flutter_application_1/screens/login_screen.dart';
 import 'package:flutter_application_1/widget/coustm_Text_field.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';

@@ -4,9 +4,18 @@ import 'package:flutter_application_1/layouts/layout_states.dart';
 import 'package:flutter_application_1/widget/costant_color.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-class UpdateProfileScreen extends StatelessWidget {
+class UpdateProfileScreen extends StatefulWidget {
+ const UpdateProfileScreen({Key? key}) : super(key: key);
+
+  @override
+  State<UpdateProfileScreen> createState() => _UpdateProfileScreenState();
+}
+
+class _UpdateProfileScreenState extends State<UpdateProfileScreen> {
   final TextEditingController nameController = TextEditingController();
+
   final TextEditingController emailController = TextEditingController();
+
   final TextEditingController phoneController = TextEditingController();
 
   @override
@@ -93,11 +102,11 @@ class UpdateProfileScreen extends StatelessWidget {
                           );
                         }
                       },
-                      child: Text(
-                        state is UpdateProfileLoadingState
-                            ? 'loading...'
-                            : 'Update Profile',
-                        style:const TextStyle(
+                      child:state is UpdateProfileLoadingState
+                            ? const CircularProgressIndicator(color: thirdColor,)
+                            : const Text(
+                         'Update Profile',
+                        style: TextStyle(
                             fontSize: 18, fontWeight: FontWeight.bold),
                       ),
                     );
